@@ -46,6 +46,7 @@ else Console.WriteLine($"Numbers {num} does not have a third digit");
 //------------------------------------------------------------------------------------------------------------------------------------------
 //--Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.--
 //------------------------------------------------------------------------------------------------------------------------------------------
+/*
 
 int Weekend (int numbers)
 {
@@ -64,8 +65,9 @@ else
     if (num <= 0) Console.WriteLine ("The entered number does not indicate the day of the week");
     else
     {
-    int result = Weekend(num);
-    if (result > 0) Console.WriteLine ($"The entered number {num} is the output");
-    else Console.WriteLine($"The entered number {num} is not an output");
+        int result = Weekend(num);
+        if (result > 0) Console.WriteLine ($"The entered number {num} is the output");
+        else Console.WriteLine($"The entered number {num} is not an output");
     }
 }
+*/

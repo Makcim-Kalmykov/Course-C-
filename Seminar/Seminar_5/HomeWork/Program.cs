@@ -79,6 +79,16 @@ void PrintArrayDouble(double[] array)
     Console.WriteLine("\b]");
 }
 
+double[] ArrayDoubleUser(int size) //массив с вещественными числами через пользователя
+{
+    double[] array = new double[size];
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"Input {i+1} element of array: ");
+        array[i] = Convert.ToDouble(Console.ReadLine());
+    }
+    return array;
+}
 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // %%% Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. %%%
@@ -120,6 +130,8 @@ Console.WriteLine($"Sum element equal: {SummElements(newArray)}");
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива. %%%
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+// Вариант 1: Через рандом
+/*
 Console.Write("Input size of array > 1: ");
 int size = Convert.ToInt32(Console.ReadLine());
 Console.Write("Input min possible value a three-digit number: ");
@@ -135,5 +147,19 @@ if (size > 1)
 }
 else
     Console.WriteLine(" ERROR: The entered array size does not match the specified parameters");
+*/
 
 
+// Вариант 2: Через ввод пользователя
+
+Console.Write("Input size of array > 1: ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+if (size > 1)
+{
+    double[] array = ArrayDoubleUser(size);
+    PrintArrayDouble(array);
+    Console.WriteLine($"The difference between the minimum and maximum values of the array is: {DifferenceMinMax(array)}");
+}
+else
+    Console.WriteLine(" ERROR: The entered array size does not match the specified parameters");
